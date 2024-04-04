@@ -1,0 +1,3 @@
+[submodule "Wise/vendor/spdlog"]
+	path = Wise/vendor/spdlog
+	url = git@github.com:gabime/spdlog.git
