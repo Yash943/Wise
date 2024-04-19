@@ -4,6 +4,9 @@
     <Filter Include="Wise">
       <UniqueIdentifier>{5D928E7C-49C9-8F0D-F2B5-7510DECB0B0F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Wise\Events">
+      <UniqueIdentifier>{A153963B-0D09-0F31-96FD-080802B20535}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Wise.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Wise\EntryPoint.h">
       <Filter>Wise</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wise\Events\ApplicationEvent.h">
+      <Filter>Wise\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wise\Events\Event.h">
+      <Filter>Wise\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wise\Events\KeyEvent.h">
+      <Filter>Wise\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wise\Events\MouseEvent.h">
+      <Filter>Wise\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Wise\Log.h">
       <Filter>Wise</Filter>

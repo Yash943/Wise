@@ -26,9 +26,9 @@ project "Wise"
 
 	includedirs
 	{
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include"
 	}
-
 
 	filter "system:windows"
 		cppdialect "C++17"
@@ -39,6 +39,11 @@ project "Wise"
 		{
 			"WS_PLATFORM_WINDOWS",
 			"WS_BUILD_DLL"
+		}
+
+		postbuildcommands
+		{
+			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
 		}
 
 	filter "configurations:Debug"
