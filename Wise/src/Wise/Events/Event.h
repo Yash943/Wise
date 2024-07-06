@@ -1,8 +1,7 @@
 #pragma once
 
+#include "wspch.h"
 #include "Core.h"
-#include <string>
-#include <functional>
 
 namespace Wise
 {
@@ -11,7 +10,7 @@ namespace Wise
 		None = 0,
 		WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
 		AppTick, AppUpdate, AppRender,
-		KeyPressed, KeyReleased,
+		KeyPressed, KeyReleased, KeyTyped,
 		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled
 	};
 	 
@@ -44,9 +43,9 @@ namespace Wise
 		{
 			return GetCategoryFlags() & category;
 		}
+		bool Handled = false;
 
 	protected:
-		bool m_Handled = false;
 	};
 
 	class EventDispatcher
@@ -61,7 +60,7 @@ namespace Wise
 		{
 			if (m_Event.GetEventType() == T::GetStaticType())
 			{
-				m_Event.m_Handled = func(*(T*)&m_Event);
+				m_Event.Handled = func(*(T*)&m_Event);
 				return true;
 			}
 			return false;

@@ -1,7 +1,7 @@
 #pragma once
 
+#include "wspch.h"
 #include "Event.h"
-#include <sstream>
 
 namespace Wise
 {

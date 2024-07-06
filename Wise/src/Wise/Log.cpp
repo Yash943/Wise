@@ -1,3 +1,4 @@
+#include "wspch.h"
 #include "Log.h"
 
 namespace Wise {

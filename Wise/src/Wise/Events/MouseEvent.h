@@ -1,8 +1,7 @@
 #pragma once
 
+#include "wspch.h"
 #include "Event.h"
-
-#include "sstream"
 
 namespace Wise
 {
@@ -29,7 +28,7 @@ namespace Wise
 	};
 
 
-	class HAZEL_API MouseScrolledEvent : public Event
+	class WISE_API MouseScrolledEvent : public Event
 	{
 	public:
 		MouseScrolledEvent(float xOffset, float yOffset): m_XOffset(xOffset), m_YOffset(yOffset) {}
@@ -47,7 +46,7 @@ namespace Wise
 		EVENT_CLASS_TYPE(MouseScrolled)
 		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 	private:
-		float m_XOffset, m_YOffset
+		float m_XOffset, m_YOffset;
 	};
 
 	class MouseButtonEvent : public Event
@@ -85,7 +84,7 @@ namespace Wise
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss < "MouseButtonReleasedEvent: " << m_Button;
+			ss << "MouseButtonReleasedEvent: " << m_Button;
 			return ss.str();
 		}
 
